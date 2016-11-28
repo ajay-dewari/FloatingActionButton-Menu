@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Floating Action Button Menu</string>
+    <string name="title_activity">FAB_Menu</string>
+</resources>
