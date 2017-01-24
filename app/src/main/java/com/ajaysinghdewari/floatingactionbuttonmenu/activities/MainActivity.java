@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     FloatingActionButton fab, fab1, fab2, fab3;
     LinearLayout fabLayout1, fabLayout2, fabLayout3;
+    View fabBGLayout;
     boolean isFABOpen=false;
 
     @Override
@@ -32,9 +33,7 @@ public class MainActivity extends AppCompatActivity {
         fab1 = (FloatingActionButton) findViewById(R.id.fab1);
         fab2= (FloatingActionButton) findViewById(R.id.fab2);
         fab3 = (FloatingActionButton) findViewById(R.id.fab3);
-
-
-
+        fabBGLayout=findViewById(R.id.fabBGLayout);
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +45,13 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        fabBGLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                closeFABMenu();
+            }
+        });
     }
 
     private void showFABMenu(){
@@ -53,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         fabLayout1.setVisibility(View.VISIBLE);
         fabLayout2.setVisibility(View.VISIBLE);
         fabLayout3.setVisibility(View.VISIBLE);
+        fabBGLayout.setVisibility(View.VISIBLE);
 
         fab.animate().rotationBy(180);
         fabLayout1.animate().translationY(-getResources().getDimension(R.dimen.standard_55));
@@ -62,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void closeFABMenu(){
         isFABOpen=false;
-
+        fabBGLayout.setVisibility(View.GONE);
         fab.animate().rotationBy(-180);
         fabLayout1.animate().translationY(0);
         fabLayout2.animate().translationY(0);
@@ -93,7 +100,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
 
-
+    @Override
+    public void onBackPressed() {
+        if(isFABOpen){
+            closeFABMenu();
+        }else{
+            super.onBackPressed();
+        }
     }
 }
