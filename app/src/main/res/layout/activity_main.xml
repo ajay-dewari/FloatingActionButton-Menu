@@ -35,6 +35,7 @@
     android:layout_marginRight="@dimen/standard_23"
     android:padding="@dimen/standard_12"
     android:clipToPadding="false"
+    app:layout_behavior="com.ajaysinghdewari.floatingactionbuttonmenu.activities.utils.MoveUpwardBehavior"
     android:gravity="center_vertical"
     android:layout_marginBottom="@dimen/standard_23"
     android:layout_gravity="bottom|end"
@@ -62,6 +63,7 @@
         android:clipToPadding="false"
         android:layout_marginRight="@dimen/standard_23"
         android:gravity="center_vertical"
+        app:layout_behavior="com.ajaysinghdewari.floatingactionbuttonmenu.activities.utils.MoveUpwardBehavior"
         android:layout_marginBottom="@dimen/standard_23"
         android:layout_gravity="bottom|end"
         android:visibility="gone">
@@ -90,6 +92,7 @@
         android:layout_marginRight="@dimen/standard_23"
         android:gravity="center_vertical"
         android:layout_marginBottom="@dimen/standard_23"
+        app:layout_behavior="com.ajaysinghdewari.floatingactionbuttonmenu.activities.utils.MoveUpwardBehavior"
         android:layout_gravity="bottom|end"
         android:visibility="gone">
 
@@ -115,6 +118,7 @@
         android:layout_marginRight="@dimen/fab_margin"
         android:gravity="center_vertical"
         android:clipToPadding="false"
+        app:layout_behavior="com.ajaysinghdewari.floatingactionbuttonmenu.activities.utils.MoveUpwardBehavior"
         android:padding="@dimen/standard_12"
         android:layout_marginBottom="@dimen/fab_margin"
         android:layout_gravity="bottom|end">
