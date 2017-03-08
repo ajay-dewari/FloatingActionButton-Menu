@@ -40,7 +40,12 @@
     android:layout_marginBottom="@dimen/standard_23"
     android:layout_gravity="bottom|end"
     android:visibility="gone">
+<!--    if you are not using Snackbar with this activity then remove below line from every place of the file:
 
+    app:layout_behavior="com.ajaysinghdewari.floatingactionbuttonmenu.activities.utils.MoveUpwardBehavior"
+
+    the above line enables the view to Scrolls up with the snackbar as the FAB do automaticaly scrolls up
+    with the snackbar, so if snackbar is not used please remive the line from all the views-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
