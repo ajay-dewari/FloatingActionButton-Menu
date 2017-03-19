@@ -45,7 +45,7 @@
     app:layout_behavior="com.ajaysinghdewari.floatingactionbuttonmenu.activities.utils.MoveUpwardBehavior"
 
     the above line enables the view to Scrolls up with the snackbar as the FAB do automaticaly scrolls up
-    with the snackbar, so if snackbar is not used please remive the line from all the views-->
+    with the snackbar, so if snackbar is not used please remove the above line from every view present in the xml-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
