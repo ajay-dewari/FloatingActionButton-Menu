@@ -11,6 +11,7 @@ import android.view.View;
  * Created by Ajay on 07-03-2017.
  */
 
+//Use this class only if you want toslide up the FAB whenever the seekbar appear, if u don't want this funcionality delete this file
 public class MoveUpwardBehavior extends CoordinatorLayout.Behavior<View> {
     public MoveUpwardBehavior() {
         super();
