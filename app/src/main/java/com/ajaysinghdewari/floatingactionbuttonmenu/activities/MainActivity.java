@@ -52,6 +52,27 @@ public class MainActivity extends AppCompatActivity {
                 closeFABMenu();
             }
         });
+        
+        fab1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // do whatever you want when the fab1 is clicked
+            }
+        });
+        
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // do whatever you want when the fab2 is clicked
+            }
+        });
+        
+        fab3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // do whatever you want when the fab3 is clicked
+            }
+        });
     }
 
     private void showFABMenu(){
