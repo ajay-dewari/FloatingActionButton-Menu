@@ -61,7 +61,23 @@ public class MainActivity extends AppCompatActivity {
         fabLayout3.setVisibility(View.VISIBLE);
         fabBGLayout.setVisibility(View.VISIBLE);
 
-        fab.animate().rotationBy(180);
+        fab.animate().rotationBy(180).setListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animator) {}
+
+            @Override
+            public void onAnimationEnd(Animator animator) {
+                if (fab.getRotation() != 180) {
+                    fab.setRotation(180);
+                }
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animator) {}
+
+            @Override
+            public void onAnimationRepeat(Animator animator) {}
+        });
         fabLayout1.animate().translationY(-getResources().getDimension(R.dimen.standard_55));
         fabLayout2.animate().translationY(-getResources().getDimension(R.dimen.standard_100));
         fabLayout3.animate().translationY(-getResources().getDimension(R.dimen.standard_145));
@@ -86,7 +102,9 @@ public class MainActivity extends AppCompatActivity {
                     fabLayout2.setVisibility(View.GONE);
                     fabLayout3.setVisibility(View.GONE);
                 }
-
+                if (fab.getRotation() != -180) {
+                    fab.setRotation(-180);
+                }
             }
 
             @Override
