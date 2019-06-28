@@ -135,7 +135,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:gravity="center_vertical"
-            app:srcCompat="@drawable/ic_toys"
+            app:srcCompat="@drawable/ic_mic"
             app:fabSize="normal"/>
     </LinearLayout>
 
