@@ -84,9 +84,6 @@ public class MainActivity extends AppCompatActivity {
                     fabLayout2.setVisibility(View.GONE);
                     fabLayout3.setVisibility(View.GONE);
                 }
-/*                if (fab.getRotation() != -180) {
-                    fab.setRotation(-180);
-                }*/
             }
 
             @Override
